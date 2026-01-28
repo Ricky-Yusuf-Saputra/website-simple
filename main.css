@@ -338,3 +338,29 @@ body {
   width: 80px;
   z-index: 2;
 }
+
+/* 1. Kembalikan container agar tidak bisa di-scroll manual */
+.container {
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden; /* Ganti kembali ke hidden agar balon di bawah tidak kelihatan */
+    position: relative;
+    text-align: center;
+    visibility: hidden;
+    width: 100vw;
+}
+
+/* 2. Pastikan bagian 'nine' (teks terakhir) tetap rapi tanpa merusak scroll */
+.nine {
+    position: absolute; /* Kembalikan ke absolute */
+    top: 20vh;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+}
+
+/* 3. Tambahkan ini di bagian bawah untuk jaga-jaga agar balon benar-benar tersembunyi */
+.seven {
+    z-index: -1; /* Menaruh balon di belakang elemen lain */
+    pointer-events: none; /* Agar tidak bisa disentuh/digeser */
+}
