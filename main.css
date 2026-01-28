@@ -29,7 +29,7 @@ body {
 }
 
 .one {
-  font-size: 2.5rem;
+  font-size: 4rem;
 }
 
 .two {
@@ -391,3 +391,22 @@ body {
 }
 
 
+@media screen and (max-width: 500px) {
+  /* Tambahkan ini agar nama di awal tidak kepotong */
+  .one {
+    font-size: 1.8rem !important; /* Ukuran lebih kecil untuk layar HP */
+    padding: 0 10px;
+    line-height: 1.2;
+  }
+  
+  /* Jika masih kurang kecil, gunakan ini */
+  #name {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  /* Sisanya kode kamu yang lain... */
+  .container {
+    width: 100%;
+  }
+}
