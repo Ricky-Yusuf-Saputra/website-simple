@@ -293,7 +293,7 @@ body {
   }
 
   .idea-6 span {
-    font-size: 2rem;
+    font-size: 5rem;
   }
 
   .six .hat {
@@ -334,11 +334,10 @@ body {
   /* Menggeser kembali sejauh setengah lebar topi agar benar-benar center */
   transform: translateX(-50%); 
   /* Atur tinggi topi agar pas di atas kepala */
-  top: -40px; 
+  top: -80px; 
   width: 80px;
   z-index: 2;
 }
-
 /* 1. Kembalikan container agar tidak bisa di-scroll manual */
 .container {
     height: 100vh;
@@ -363,4 +362,30 @@ body {
 .seven {
     z-index: -1; /* Menaruh balon di belakang elemen lain */
     pointer-events: none; /* Agar tidak bisa disentuh/digeser */
+}
+
+.six .hat {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* UBAH DI SINI: Makin besar angka negatifnya, makin naik topinya */
+  top: -60px; 
+  width: 80px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 500px) {
+  .six .hat {
+    top: -50px; /* Sesuaikan juga buat tampilan HP */
+    width: 50px;
+  }
+}
+
+.six .hat {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  top: -227px !important; /* Coba angka gede sekalian -120px buat ngetes */
+  width: 80px !important;
+  z-index: 999 !important;
 }
